@@ -17,11 +17,22 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":enterprise-business-rules"))
+
     // Use JUnit Jupiter for testing.
     testImplementation("org.junit.jupiter:junit-jupiter:5.7.2")
 
     // This dependency is used by the application.
     implementation("com.google.guava:guava:30.1.1-jre")
+
+    compileOnly("org.projectlombok:lombok:1.18.22")
+    annotationProcessor("org.projectlombok:lombok:1.18.22")
+
+    testCompileOnly("org.projectlombok:lombok:1.18.22")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.22")
+
+    testImplementation("org.mockito:mockito-all:1.10.19")
+
 }
 
 application {
